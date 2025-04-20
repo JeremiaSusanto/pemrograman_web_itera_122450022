@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deadline Helper</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+  <div class="max-w-3xl mx-auto">
+    <!-- Header -->
+    <header class="mb-8 text-center">
+      <h1 class="text-3xl font-bold text-blue-600 mb-2">Deadline Helper</h1>
+      <p class="text-gray-500 italic text-md">
+        "Tugasnya dikerjain dek, nanti nangis"
+      </p>
+    </header>
+    
+
+    <!-- Main -->
+    <main class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+
+      <!-- Form Input -->
+      <form id="taskForm" class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6 group">
+        <div class="relative w-full">
+          <input
+            type="text"
+            id="taskInput"
+            required
+            placeholder="Tulis tugasmu di sini..."
+            class="w-full border border-gray-300 rounded-xl px-4 py-2 pl-10 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all"
+          />
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-green-500 transition-all" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 21h2.586l11.293-11.293-2.586-2.586L4 18.414V21zM20.707 7.293a1 1 0 0 0 0-1.414l-2.586-2.586a1 1 0 0 0-1.414 0l-1.586 1.586 4 4 1.586-1.586z"/>
+          </svg>
+        </div>
+
+        <input
+          type="date"
+          id="deadlineInput"
+          class="w-full sm:w-auto border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all"
+        />
+
+        <button
+          type="submit"
+          class="bg-green-500 text-white px-4 py-2 rounded-xl hover:bg-green-600 transition-all w-full sm:w-auto"
+        >
+          Tambah
+        </button>
+      </form>
+
+      <!-- Daftar Tugas -->
+      <div id="output">
+        <p id="emptyMessage" class="text-gray-400 text-center py-4">Belum ada tugas. Tambahkan dulu yuk!</p>
+        <ul id="taskList" class="space-y-4">
+          <!-- Tugas-tugas akan ditambahkan di sini -->
+        </ul>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-10 text-center text-sm text-gray-500 px-4">
+      <p>&copy; 2025 Jeremia's To-Do App. Dibuat dengan ❤️ dan Tailwind CSS.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
