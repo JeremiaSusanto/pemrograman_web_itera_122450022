@@ -1,0 +1,3 @@
+[run]
+source = tugaspert6
+omit = tugaspert6/test*
